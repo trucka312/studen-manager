@@ -3,44 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
     <link
-      href=""
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <title>hahahahaha</title>
   </head>
   <body>
     <div class="container">
-
       <div class="content-left">
         <div class="form" id="form-1">
           <h3 class="heading">nhập thông tin sinh viên ❤️</h3>
           <div class="spacer"></div>
-      
+
           <div class="form-group">
             <label for="fullname" class="form-label">Tên sinh viên</label>
-            <input id="fullname" name="fullname" type="text" placeholder="VD: Nguyễn Văn A" class="form-control">
+            <input
+              id="fullname"
+              name="fullname"
+              type="text"
+              placeholder="VD: Nguyễn Văn A"
+              class="form-control"
+            />
             <span class="form-message"></span>
           </div>
-      
+
           <div class="form-group">
             <label for="date" class="form-label">Năm sinh</label>
-            <input id="date" name="date" type="text" placeholder="VD: 20/02/2002" class="form-control">
+            <input
+              id="date"
+              name="date"
+              type="text"
+              placeholder="VD: 20/02/2002"
+              class="form-control"
+            />
             <span class="form-message"></span>
           </div>
-      
+
           <div class="form-group">
             <label for="point" class="form-label">Điểm tốt nghiệp</label>
-            <input id="point" name="point" type="point" placeholder="Nhập điểm tốt nghiệp" class="form-control">
+            <input
+              id="point"
+              name="point"
+              type="point"
+              placeholder="Nhập điểm tốt nghiệp"
+              class="form-control"
+            />
             <span class="form-message"></span>
           </div>
-      
-          <button class="form-submit" id="btn-add" onclick="handleAddStudent()">Thêm sinh viên</button>
+
+          <button class="form-submit" id="btn-add" onclick="handleAddStudent()">
+            Thêm sinh viên
+          </button>
+          
+          <div
+            style="
+              /* position: relative; */
+              width: 100px;
+              height: 100px;
+              background-color: pink;
+            "
+          >
+          <div
+          style="
+              position: absolute;
+              width: 100px;
+              height: 100px;
+              top:100%;
+              background-color: black;
+            "
+          ></div>
+          <div
+              style="
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                background-color: red;
+              top:100%;
+
+              "
+            ></div>
+          </div>
         </div>
       </div>
-    
+
       <div class="content-right">
         <h2 class="desc">danh sách sinh viên nè :))</h2>
         <div class="spacer"></div>
@@ -54,39 +104,51 @@
               <th scope="col">Thực hiện</th>
             </tr>
             <tr>
-              <th scope="col"><button class="custom-btn btn-13">sắp xếp</button></th>
-              
+              <th scope="col">
+                <button class="custom-btn btn-13">sắp xếp</button>
+              </th>
+
               <!-- dropdown sort decereasement  -->
               <th scope="col" colspan="2">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-danger custom-btn btn-13">sắp xếp giảm</button>
-                  <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                  <button
+                    type="button"
+                    class="btn btn-danger custom-btn btn-13"
+                  >
+                    sắp xếp giảm
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-danger dropdown-toggle dropdown-toggle-split"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
                     <span class="visually-hidden">Toggle Dropdown</span>
                   </button>
                   <ul class="dropdown-menu">
                     <li>
-                      <button 
-                        onclick="handleSortDecreaseName()" 
+                      <button
+                        onclick="handleSortDecreaseName()"
                         class="dropdown-item custom-btn btn-13"
-                        >
+                      >
                         tên
                       </button>
                     </li>
 
                     <li>
-                      <button 
-                        onclick="handleSortDecreaseYear()" 
+                      <button
+                        onclick="handleSortDecreaseYear()"
                         class="dropdown-item custom-btn btn-13"
-                        >
+                      >
                         năm sinh
                       </button>
                     </li>
 
                     <li>
-                      <button 
-                        onclick="handleSortDecreasePoint()" 
+                      <button
+                        onclick="handleSortDecreasePoint()"
                         class="dropdown-item custom-btn btn-13"
-                        >
+                      >
                         điểm
                       </button>
                     </li>
@@ -97,35 +159,44 @@
               <!-- dropdown sort increament -->
               <th scope="col" colspan="2">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-danger custom-btn btn-13">sắp xếp tăng</button>
-                  <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                  <button
+                    type="button"
+                    class="btn btn-danger custom-btn btn-13"
+                  >
+                    sắp xếp tăng
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-danger dropdown-toggle dropdown-toggle-split"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
                     <span class="visually-hidden">Toggle Dropdown</span>
                   </button>
                   <ul class="dropdown-menu">
-
                     <li>
-                      <button 
-                        onclick="handleSortIncrementName()" 
+                      <button
+                        onclick="handleSortIncrementName()"
                         class="dropdown-item custom-btn btn-13"
-                        >
+                      >
                         tên
                       </button>
                     </li>
 
                     <li>
-                      <button 
-                        onclick="handleSortIncrementYear()" 
+                      <button
+                        onclick="handleSortIncrementYear()"
                         class="dropdown-item custom-btn btn-13"
-                        >
+                      >
                         năm sinh
                       </button>
                     </li>
 
                     <li>
-                      <button 
+                      <button
                         onclick="handleSortIncrementPoint()"
                         class="dropdown-item custom-btn btn-13"
-                        >
+                      >
                         điểm
                       </button>
                     </li>
@@ -134,50 +205,52 @@
               </th>
             </tr>
           </thead>
-          <tbody id="studentList">
-          </tbody>
+          <tbody id="studentList"></tbody>
         </table>
       </div>
-
     </div>
   </body>
 </html>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+  crossorigin="anonymous"
+></script>
 <script>
   // initialization students
   let ListStudents = [
     {
-      name: 'Nguyễn Văn A',
+      name: "Nguyễn Văn A",
       year: 2002,
-      point : 7.8
+      point: 7.8,
     },
     {
-      name: 'Nguyễn Văn B',
+      name: "Nguyễn Văn B",
       year: 2002,
-      point : 4.7
+      point: 4.7,
     },
     {
-      name: 'Nguyễn Văn C',
+      name: "Nguyễn Văn C",
       year: 2002,
-      point : 9.0
+      point: 9.0,
     },
     {
-      name: 'Nguyễn Văn D',
+      name: "Nguyễn Văn D",
       year: 2002,
-      point : 4.99
-    }
-  ]
+      point: 4.99,
+    },
+  ];
 
   // chỗ hiển thị list
-  const tableStudent= document.getElementById('studentList')
+  const tableStudent = document.getElementById("studentList");
   // nút thêm bên form thêm
-  const btnAddStudent = document.getElementById('btn-add')
-  
+  const btnAddStudent = document.getElementById("btn-add");
+
   // vào phát show luôn ra list Student =)
   showStudent();
 
   // func show student nè
-  function showStudent(){
+  function showStudent() {
     const result = ListStudents.map((student, index) => {
       return `<tr>
         <td>${index + 1}</td>
@@ -203,66 +276,65 @@
   // func thêm students nè
   const handleAddStudent = () => {
     const newStudent = {
-      name : document.getElementById('fullname').value,
-      year : document.getElementById('date').value,
-      point : document.getElementById('point').value
-    }
+      name: document.getElementById("fullname").value,
+      year: document.getElementById("date").value,
+      point: document.getElementById("point").value,
+    };
     ListStudents.push(newStudent);
     showStudent();
-  }
+  };
 
   // hàm xóa đây nè
   const handleRemoveStudent = (id) => {
     const studentID = ListStudents.findIndex((student) => student.id === id);
     ListStudents.splice(studentID, 1);
     showStudent();
-  }
-  
+  };
+
   // three func sort increment below hê hê
   const handleSortIncrementName = () => {
-     ListStudents.sort(function(sv1, sv2) {
+    ListStudents.sort(function (sv1, sv2) {
       let a = sv1.name.toLowerCase();
       let b = sv2.name.toLowerCase();
       return a === b ? 0 : a > b ? 1 : -1;
     });
     showStudent();
-  }
+  };
 
   const handleSortIncrementYear = () => {
-     ListStudents.sort(function(sv1, sv2) {
+    ListStudents.sort(function (sv1, sv2) {
       return sv1.year - sv2.year;
     });
     showStudent();
-  }
+  };
 
   const handleSortIncrementPoint = () => {
-     ListStudents.sort(function(sv1, sv2) {
+    ListStudents.sort(function (sv1, sv2) {
       return sv1.point - sv2.point;
     });
     showStudent();
-  }
+  };
 
   // 3 phăng sừn sắp xếp giảm
   const handleSortDecreaseName = () => {
-     ListStudents.sort(function(sv1, sv2) {
+    ListStudents.sort(function (sv1, sv2) {
       let a = sv1.name.toLowerCase();
       let b = sv2.name.toLowerCase();
       return a === b ? 0 : a < b ? 1 : -1;
     });
     showStudent();
-  }
+  };
   const handleSortDecreaseYear = () => {
-     ListStudents.sort(function(sv1, sv2) {
+    ListStudents.sort(function (sv1, sv2) {
       return sv2.year - sv1.year;
     });
     showStudent();
-  }
+  };
 
   const handleSortDecreasePoint = () => {
-     ListStudents.sort(function(sv1, sv2) {
+    ListStudents.sort(function (sv1, sv2) {
       return sv2.point - sv1.point;
     });
     showStudent();
-  }
-
+  };
 </script>
